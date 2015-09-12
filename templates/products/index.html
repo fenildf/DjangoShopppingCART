@@ -1,0 +1,20 @@
+<html>
+
+<head>
+</head>
+
+
+<body>
+<h1> List of Products </h1>
+
+{% for product in products %}
+<h3><a href="/products/{{product.slug}}">
+{{product.name}}</a></h3>
+<img src="/media/{{product.photo}}" />
+<p>price: ${{product.price_in_dollars}}</p>
+<p>manufactured by:{{product.manufacturer}}</p>
+{% endfor %}
+
+</body>
+
+</html>

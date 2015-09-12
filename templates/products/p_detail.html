@@ -1,0 +1,25 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+<form method="POST" action='{% url "get_cart" %} '> {% csrf_token %}
+<input type='submit' value='go to cart '/>
+</form>
+
+<span>cart items:1</span>
+{% for p in p_detail %}
+<h4>{{ p.name }}</h4>
+<img src="/media/{{p.photo}}"/>
+<p>Description: {{p.description}}</p>
+<p>Price: ${{ p.price_in_dollars }} </p>
+<button><a href="#">Add to Cart</a></button>
+
+<hr/>
+{% endfor %}
+</body>
+
+
+</html>

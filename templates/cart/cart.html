@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th {
+    padding: 5px;
+    text-align: left; 
+    background-color:yellowgreen;   
+}
+
+td{
+  padding: 5px;
+  text-align: left; 
+}
+</style>
+</head>
+
+
+<body>
+<h3>Your Shopping Cart</h3>
+
+<table style="width:100%">
+
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+        </tr>
+    	
+       
+        <tr>
+	
+            <td>smart phone</td>
+            <td>{{ cart.quantity }}</td>
+            <td> $ 345.80</td>
+        </tr>
+   
+    </table>
+
+<button><a href="http://127.0.0.1:8000/checkout/">Proceed to Checkout</a></button>
+</body>
+
+</html>
